@@ -4,6 +4,7 @@
   "description": "Client side for MERN stack setup demo",
   "main": "index.js",
   "scripts": {
+    "dev": "npm run dev --prefix ..",
     "start": "node dev_server.js",
     "bundle": "webpack --config webpack.prod.js --progress",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,6 +16,7 @@
     "url": "https://github.com/keithsilcock/mern-setup.git"
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "babel-polyfill": "^6.26.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

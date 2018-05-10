@@ -1,10 +1,23 @@
 const express = require('express');
+const cors = require('cors');
 const PORT = process.env.PORT || 9000;
 
 const app = express();
 
+app.use(cors());
+
+app.get('/user-data', (req, res) => {
+    const user = {
+        name: 'James McCloud',
+        email: 'blueSkyline@cityscapes.com'
+    }
+
+    res.send(user);
+
+});
+
 app.get('/', (req, res) => {
-    res.send('<h1> Sup bro. You lookin at my hoodie?</h1>');
+    res.send('<h1> Sup bro. You still lookin at my hoodie?</h1>');
 });
 
 app.listen(PORT, () => {
